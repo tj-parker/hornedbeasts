@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import list from '../data.json';
 import HornedBeast from './HornedBeast';
-import Button from 'react-bootstrap/Button';
+import '../App.css';
+import Modal from 'react-bootstrap/Modal';
 
 class Main extends Component {
     constructor(props) {
         super(props);
-
+        this.state = {};
     }
     render() {
         let beasts = [];
@@ -15,7 +16,8 @@ class Main extends Component {
                     <HornedBeast
                         title={list[i].title}
                         imageUrl={list[i].image_url}
-                        description={list[i].description} />
+                        description={list[i].description} 
+                    />
             )
         }   
         return (
