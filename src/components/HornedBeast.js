@@ -24,11 +24,11 @@ class HornedBeast extends Component {
             <Container>
                 <Card>
                     <Card.Img variant="top"
-                        src={this.props.imageUrl} />
+                        src={this.props.image_url} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>{this.props.description}</Card.Text>
-                        <Button variant="secondary" onClick={this.handleClick}>💙 Favorites: {this.state.clicks}</Button>
+                        <Button variant="secondary" onClick={this.handleClick}><span role="img">💙</span> Favorites: {this.state.clicks}</Button>
                     </Card.Body>
 
                 </Card>
