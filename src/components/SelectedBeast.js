@@ -5,7 +5,7 @@ class SelectedBeast extends Component {
 
     render() {
         return (
-            <Modal show={this.props.show} onHide={this.props.closeModal}>
+            <Modal show={this.props.show} onHide={this.props.closeModal} size="xl">
                 <Modal.Header closeButton>
                     <Modal.Title>{this.props.title}</Modal.Title>
                 </Modal.Header>
@@ -13,7 +13,7 @@ class SelectedBeast extends Component {
                     <img src={this.props.image_url} alt={this.props.title} />
                 </Modal.Body>
             </Modal>
-        )
+        );
     }
 }
 
