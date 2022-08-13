@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import list from './data.json';
 import SelectedBeast from './components/SelectedBeast';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,13 +16,15 @@ class App extends Component {
       modalImg: null,
       modalTitle: null,
       modalShow: false
-    }
+    };
+    
   }
 
-  handleClick = (thisBeast) => {
+
+  handleClick = () => {
     this.setState({
-      modalImg: thisBeast.props.image_url,
-      modalTitle: thisBeast.props.title,
+      modalImg: this.props.image_url,
+      modalTitle: this.props.title,
       modalShow: true
     })
   }

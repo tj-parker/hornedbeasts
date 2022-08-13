@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import list from '../data.json';
 import HornedBeast from './HornedBeast';
 import '../App.css';
+
 
 
 class Main extends Component {
@@ -11,16 +11,22 @@ class Main extends Component {
             thisBeast: this.props.beasts
         };
     }
+    
     render() {
  
         return (
             <div id='main'>
-                {this.state.thisBeast.map(value => 
-                    <HornedBeast 
-                      handleClick={this.props.handleClick}
+                {this.state.thisBeast.map(value => (
+                    <div id="beast">
+                        <button onClick={this.props.handleClick}>Open</button>
+                        <HornedBeast 
                       title={value.title}
                       image_url={value.image_url}
-                      description={value.description} />
+                      description={value.description}
+                       />
+                       
+                    </div>
+                    )
                 )}
             </div>
         )
