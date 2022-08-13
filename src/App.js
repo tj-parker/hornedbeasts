@@ -21,12 +21,13 @@ class App extends Component {
   }
 
 
-  handleClick = () => {
+  handleClick = (aBeast) => {
     this.setState({
-      modalImg: this.props.image_url,
-      modalTitle: this.props.title,
+      modalImg: aBeast.image_url,
+      modalTitle: aBeast.title,
       modalShow: true
     })
+    console.log(aBeast);
   }
 
   closeModal = () => {
@@ -38,7 +39,8 @@ class App extends Component {
       <div className="App" >
         <Header />
         <Main beasts={list} handleClick={this.handleClick} />
-        <SelectedBeast image_url={this.state.modalImg} title={this.state.modalTitle} closeModal={this.closeModal} show={this.state.modalShow} />
+        <SelectedBeast 
+        image_url={this.state.modalImg} title={this.state.modalTitle} closeModal={this.closeModal} show={this.state.modalShow} />
         <Footer />
       </div>
     );

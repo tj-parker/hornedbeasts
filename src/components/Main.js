@@ -17,13 +17,13 @@ class Main extends Component {
         return (
             <div id='main'>
                 {this.state.thisBeast.map(value => (
-                    <div id="beast">
-                        <button onClick={this.props.handleClick}>Open</button>
+                    <div id="beast" onClick={() => this.props.handleClick(value)}>
                         <HornedBeast 
                       title={value.title}
                       image_url={value.image_url}
                       description={value.description}
                        />
+                       
                        
                     </div>
                     )
