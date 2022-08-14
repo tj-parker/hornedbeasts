@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Filter from './components/Filter';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,10 +15,13 @@ class App extends Component {
     this.state = {
       modalImg: null,
       modalTitle: null,
-      modalShow: false
+      modalShow: false,
+      horns: '',
+      list: list
     };
     
   }
+
 
 
   handleClick = (aBeast) => {
@@ -38,6 +41,7 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
+        
         <Main beasts={list} handleClick={this.handleClick} />
         <SelectedBeast 
         image_url={this.state.modalImg} title={this.state.modalTitle} closeModal={this.closeModal} show={this.state.modalShow} />
